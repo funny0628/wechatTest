@@ -91,13 +91,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Taliyah.png"
   },
   {
-    "id": "sol",
-    "tags": "range_tag mage_tag  boy_tag",
-    "title": "铸星龙王",
-    "name": "索尔",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Sol.png"
-  },
-  {
     "id": "jhin",
     "tags": "boy_tag physical_tag melee_tag charge_tag",
     "title": "戏命师",
@@ -119,13 +112,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Kindred.png"
   },
   {
-    "id": "tahmkench",
-    "tags": "melee_tag  boy_tag  tank_tag  mage_tag support_tag",
-    "title": "河流之王",
-    "name": "塔姆",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Tahmkench.png"
-  },
-  {
     "id": "ekko",
     "tags": "melee_tag  boy_tag  mage_tag charge_tag jungle_tag",
     "title": "时间刺客",
@@ -138,13 +124,6 @@ module.exports=[
     "title": "星界游神",
     "name": "巴德",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Bard.png"
-  },
-  {
-    "id": "reksai",
-    "tags": "melee_tag charge_tag girl_tag physical_tag jungle_tag",
-    "title": "虚空遁地兽",
-    "name": "雷克赛",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Reksai.png"
   },
   {
     "id": "kalista",
@@ -441,13 +420,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Skarner.png"
   },
   {
-    "id": "wukong",
-    "tags": "charge_tag boy_tag tank_tag melee_tag",
-    "title": "齐天大圣",
-    "name": "悟空",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Wukong.png"
-  },
-  {
     "id": "leona",
     "tags": "charge_tag girl_tag  tank_tag melee_tag mage_tag",
     "title": "曙光女神",
@@ -553,13 +525,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Renekton.png"
   },
   {
-    "id": "leesin",
-    "tags": "charge_tag boy_tag jungle_tag tank_tag melee_tag",
-    "title": "盲僧",
-    "name": "李青",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Leesin.png"
-  },
-  {
     "id": "karma",
     "tags": "girl_tag mage_tag support_tag range_tag",
     "title": "天启者",
@@ -574,25 +539,11 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Maokai.png"
   },
   {
-    "id": "jarvan",
-    "tags": "melee_tag charge_tag boy_tag jungle_tag tank_tag physical_tag",
-    "title": "德玛西亚皇子",
-    "name": "嘉文四世",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Jarvan.png"
-  },
-  {
     "id": "nocturne",
     "tags": "charge_tag boy_tag jungle_tag physical_tag melee_tag",
     "title": "永恒梦魇",
     "name": "魔腾",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Nocturne.png"
-  },
-  {
-    "id": "missfortune",
-    "tags": " girl_tag physical_tag range_tag",
-    "title": "赏金猎人",
-    "name": "厄运女郎",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Missfortune.png"
   },
   {
     "id": "urgot",
@@ -614,13 +565,6 @@ module.exports=[
     "title": "猩红收割者",
     "name": "弗拉基米尔",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Vladimir.png"
-  },
-  {
-    "id": "xinzhao",
-    "tags": "charge_tag boy_tag jungle_tag physical_tag melee_tag",
-    "title": "德邦总管",
-    "name": "赵信",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Xinzhao.png"
   },
   {
     "id": "ryze",
@@ -676,13 +620,6 @@ module.exports=[
     "title": "蛮族之王",
     "name": "泰达米尔",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Tryndamere.png"
-  },
-  {
-    "id": "mundo",
-    "tags": "boy_tag tank_tag melee_tag mage_tag jungle_tag",
-    "title": "祖安狂人",
-    "name": "蒙多医生",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Mundo.png"
   },
   {
     "id": "gangplank",
@@ -760,13 +697,6 @@ module.exports=[
     "title": "武器大师",
     "name": "贾克斯",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Jax.png"
-  },
-  {
-    "id": "yi",
-    "tags": "charge_tag boy_tag jungle_tag physical_tag melee_tag",
-    "title": "无极剑圣",
-    "name": "易",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Yi.png"
   },
   {
     "id": "corki",
@@ -860,13 +790,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Zilean.png"
   },
   {
-    "id": "twisted",
-    "tags": "boy_tag range_tag physical_tag mage_tag charge_tag",
-    "title": "卡牌大师",
-    "name": "崔斯特",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Twisted.png"
-  },
-  {
     "id": "evelynn",
     "tags": "girl_tag  mage_tag jungle_tag melee_tag",
     "title": "寡妇制造者",
@@ -895,13 +818,6 @@ module.exports=[
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Shaco.png"
   },
   {
-    "id": "haimdinger",
-    "tags": "boy_tag mage_tag range_tag",
-    "title": "大发明家",
-    "name": "黑默丁格",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Haimdinger.png"
-  },
-  {
     "id": "akali",
     "tags": "girl_tag mega_tag melee_tag girl_tag charge_tag",
     "title": "暗影之拳",
@@ -928,13 +844,6 @@ module.exports=[
     "title": "狂暴之心",
     "name": "凯南",
     "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Kennen.png"
-  },
-  {
-    "id": "kogmaw",
-    "tags": "boy_tag mage_tag range_tag physical_tag",
-    "title": "深渊巨口",
-    "name": "克格莫",
-    "iconUrl": "https://ossweb-img.qq.com/images/lol/img/champion/Kogmaw.png"
   },
   {
     "id": "malzahar",

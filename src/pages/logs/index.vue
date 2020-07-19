@@ -1,61 +1,135 @@
 <template>
-  <div>
-      <swiper v-if="imgUrls.length > 0" indidator-dots="imgUrls.length > 1" >
-      <block v-for="(item, index) in imgUrls" :key="index" >
-        <swiper-item>
-          <image :src="item" mode="scaleToFill"></image>
-        </swiper-item>
-      </block>
-    </swiper>
+  <div id="detaillol">
+    <div class="swiper">
+      <swiper style="color='#fff'">
+        <block v-for="(item,index) in loldetail.bgs" :key="index">
+          <swiper-item>
+            <image :src="item"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <p class="skill">{{loldetail.title}}</p>
+        <p class="name">{{loldetail.name}}</p>
+        <p class="power">
+          <span v-for="(itm,idx) in loldetail.tags" :key="idx">{{itm}}</span>
+        </p>
+        <div class="Ability">
+          <p>
+            <span class="title">生存能力:</span>
+           <span class="jineng"><progress stroke-width="12" :percent="loldetail.Ability.life" activeColor="#1eca6b" backgroundColor="#363c3c"/></span>
+          </p>
+          <p>
+            <span class="title">物理攻击:</span>
+            <span class="jineng"><progress stroke-width="12" :percent="loldetail.Ability.physical" activeColor="#f2c500" backgroundColor="#363c3c"/></span>
+          </p>
+          <p>
+            <span class="title">魔法攻击:</span>
+            <span class="jineng"><progress stroke-width="12" :percent="loldetail.Ability.magic" activeColor="#f59d00" backgroundColor="#363c3c"/></span>
+          </p>
+          <p>
+           <span class="title">操作难度:</span>
+           <span class="jineng"><progress stroke-width="12" :percent="loldetail.Ability.difficulty" activeColor="#cb8cff" backgroundColor="#363c3c"/></span>
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <p class="desc">{{loldetail.story}}</p> 
+      </div>
+    </div>
 
-    <ul class="container log-list">
-      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
-        <card :text="(index + 1) + ' . ' + log"></card>
-      </li>
-    </ul>
   </div>
 </template>
 
 <script>
-import { formatTime } from '@/utils/index'
-import card from '@/components/card'
-
+import allLol from '../../utils/lol/lol_details_duowan.js'
 export default {
-  components: {
-    card
-  },
-
-  data () {
+  data() {
     return {
-      logs: [],
-      imgUrls: [
-        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/newsPicture/05558951-de60-49fb-b674-dd906c8897a6',
-        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/coursePicture/0fbcfdf7-0040-4692-8f84-78bb21f3395d',
-        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/management-school-picture/7683b32e-4e44-4b2f-9c03-c21f34320870'
-      ]
+      all_Lol:allLol,
+      loldetail:{}
+
     }
   },
-
-  created () {
-    let logs
-    if (mpvuePlatform === 'my') {
-      logs = mpvue.getStorageSync({key: 'logs'}).data || []
-    } else {
-      logs = mpvue.getStorageSync('logs') || []
-    }
-    this.logs = logs.map(log => formatTime(new Date(log)))
+  onLoad(query){
+    let data = this.all_Lol.filter(item => item.name === query.name)
+    this.loldetail = data[0]   
+    wx.setNavigationBarTitle({
+      title: `${this.loldetail.title} - ${this.loldetail.name}`
+    }) 
   }
 }
 </script>
 
 <style>
-.log-list {
+#detaillol {
+  width: 100vw;
+  min-height:100vh;
+  background-color: #343434;
+  
+}
+#detaillol  .swiper image {
+  height: 150px;
+  width: 100%;
+  color: #fff;
+}
+#detaillol .bottom {
+  padding: 8px 5px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
   display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+
+}
+#detaillol .bottom .left {
+  flex: 1;
+}
+#detaillol .bottom .skill {
+  line-height: 32px;
+}
+#detaillol .bottom .name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+
+}
+#detaillol .bottom .power {
+  display: flex;
+}
+#detaillol .bottom .power span{
+  font-size: 13px;  
+  padding: 3px;
+  background-color: #099d7e;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+#detaillol .bottom .Ability{
+ font-size: 13px;
+ margin: 5px;
+}
+#detaillol .bottom .Ability p{
+  display: flex;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 3px;
+  align-items: center;
+
+}
+#detaillol .bottom .Ability p .title{
+  flex: 1;
+}
+#detaillol .bottom .Ability p .jineng{
+  height: 16px;
+ flex: 1.6;
+
 }
 
-.log-item {
-  margin: 10rpx;
+
+#detaillol .bottom .right {
+  flex: 1;
+  font-size: 14px;
+
 }
 </style>
